@@ -1,0 +1,73 @@
+*.sqlite*
+*~
+*.swp
+
+# Laravel
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/storage/framework/cache/*
+!/storage/framework/cache/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/testing/*
+!/storage/framework/testing/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+/storage/logs/*
+!/storage/logs/.gitignore
+
+# Environment
+.env
+.env.backup
+.env.production
+.env.staging
+.env.testing
+
+# Dependencies
+/vendor
+/node_modules
+
+# Build files
+/public/build
+/public/mix-manifest.json
+
+# Composer
+composer.phar
+
+# NPM
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# IDE
+/.idea
+/.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PHPUnit
+.phpunit.cache
+
+# Pest
+.pest
+
+# Laravel Pint
+.pint.cache
+
+# PHPStan
+.phpstan.cache
+
+# Rector
+rector-cache
+
+# Coverage
+coverage

@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html { @apply antialiased; }
+    body { @apply bg-cream-50 font-sans text-slate-800; }
+    [x-cloak] { display: none !important; }
+
+    ::selection { @apply bg-accent-300/60; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { @apply rounded-full bg-slate-300; }
+    ::-webkit-scrollbar-thumb:hover { @apply bg-slate-400; }
+
+    @media (prefers-reduced-motion: reduce) {
+        [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+}
+
+/* Reveal-on-scroll (plain CSS so Tailwind doesn't purge the JS-only .revealed class) */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-reveal].revealed { opacity: 1; transform: translateY(0); }
+
+@layer components {
+    .sidebar-link {
+        @apply flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-xl transition-all duration-200;
+        @apply text-slate-500 hover:bg-accent-100/60 hover:text-primary-900;
+    }
+    .sidebar-link.active {
+        @apply bg-primary-900 text-accent-200 shadow-lg shadow-primary-950/20;
+    }
+    .sidebar-link.active .sidebar-link-icon {
+        @apply text-accent-300;
+    }
+    .sidebar-link-icon { @apply shrink-0 w-5 h-5; }
+    .sidebar-section-title {
+        @apply px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-slate-400;
+    }
+
+    /* Deep navy + gold auth branding */
+    .auth-gradient {
+        background: linear-gradient(135deg, #0b1426 0%, #1c2f4b 45%, #2b476e 100%);
+        background-size: 200% 200%;
+        animation: gradientShift 10s ease infinite;
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .auth-input {
+        @apply w-full rounded-xl border-0 bg-cream-100 px-4 py-3 text-sm text-slate-800 shadow-sm transition-all duration-200;
+        @apply placeholder:text-slate-400;
+        @apply focus:bg-white focus:ring-2 focus:ring-accent-400 focus:shadow-card;
+    }
+
+    .auth-btn {
+        @apply w-full rounded-xl bg-gradient-to-r from-cta-500 to-cta-400 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-cta-600/25 transition-all duration-200;
+        @apply hover:from-cta-600 hover:to-cta-500 hover:shadow-xl hover:-translate-y-0.5;
+        @apply active:translate-y-0 active:shadow-md;
+    }
+
+    .bookmark-accent {
+        @apply relative overflow-hidden;
+    }
+    .bookmark-accent::before {
+        content: '';
+        @apply absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-accent-400 via-cta-400 to-accent-500;
+    }
+
+    .sidebar-header-deco {
+        background: linear-gradient(135deg, #0b1426 0%, #2b476e 55%, #835b21 130%);
+        background-size: 200% 200%;
+        animation: gradientShift 8s ease infinite;
+    }
+
+    .stat-card-library {
+        @apply rounded-2xl border border-cream-200 bg-white p-6 shadow-card relative overflow-hidden;
+        @apply transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1;
+    }
+    .stat-card-library::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(to bottom, #4670a6, #d5ab3b);
+    }
+    .stat-card-library:nth-child(2)::after {
+        background: linear-gradient(to bottom, #22a45f, #a3d9a3);
+    }
+    .stat-card-library:nth-child(3)::after {
+        background: linear-gradient(to bottom, #e8a13a, #f4c66a);
+    }
+    .stat-card-library:nth-child(4)::after {
+        background: linear-gradient(to bottom, #e05d52, #f28b80);
+    }
+
+    .decorative-dots {
+        background-image: radial-gradient(circle, rgba(20, 33, 58, 0.12) 1px, transparent 1px);
+        background-size: 22px 22px;
+    }
+
+    /* Navbar elevation on scroll */
+    .navbar-blur {
+        @apply border-cream-200/80 bg-cream-50/80 backdrop-blur-xl;
+    }
+    .navbar-blur.scrolled {
+        @apply border-b border-cream-200 shadow-card bg-cream-50/90;
+    }
+
+    /* Table wrapper */
+    .data-table thead { @apply text-[11px] uppercase tracking-wider text-slate-500; }
+    .data-table thead th { @apply px-4 py-3 font-semibold; }
+    .data-table tbody { @apply divide-y divide-cream-200; }
+}
