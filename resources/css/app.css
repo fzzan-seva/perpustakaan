@@ -44,9 +44,9 @@
         @apply px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-slate-400;
     }
 
-    /* Deep navy + gold auth branding */
+    /* Deep forest green + gold auth branding */
     .auth-gradient {
-        background: linear-gradient(135deg, #0b1426 0%, #1c2f4b 45%, #2b476e 100%);
+        background: linear-gradient(135deg, #0c1f18 0%, #19362b 45%, #23513e 100%);
         background-size: 200% 200%;
         animation: gradientShift 10s ease infinite;
     }
@@ -78,7 +78,7 @@
     }
 
     .sidebar-header-deco {
-        background: linear-gradient(135deg, #0b1426 0%, #2b476e 55%, #835b21 130%);
+        background: linear-gradient(135deg, #0c1f18 0%, #19362b 55%, #b58e29 130%);
         background-size: 200% 200%;
         animation: gradientShift 8s ease infinite;
     }
@@ -94,10 +94,10 @@
         left: 0;
         width: 4px;
         height: 100%;
-        background: linear-gradient(to bottom, #4670a6, #d5ab3b);
+        background: linear-gradient(to bottom, #387e61, #d0ab40);
     }
     .stat-card-library:nth-child(2)::after {
-        background: linear-gradient(to bottom, #22a45f, #a3d9a3);
+        background: linear-gradient(to bottom, #10b981, #a7e8c8);
     }
     .stat-card-library:nth-child(3)::after {
         background: linear-gradient(to bottom, #e8a13a, #f4c66a);
@@ -107,7 +107,7 @@
     }
 
     .decorative-dots {
-        background-image: radial-gradient(circle, rgba(20, 33, 58, 0.12) 1px, transparent 1px);
+        background-image: radial-gradient(circle, rgba(25, 54, 43, 0.14) 1px, transparent 1px);
         background-size: 22px 22px;
     }
 

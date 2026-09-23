@@ -22,18 +22,18 @@
             {{-- Floating books illustration (desktop) --}}
             <div class="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 xl:block animate-float">
                 <svg width="220" height="200" viewBox="0 0 220 200" fill="none">
-                    <ellipse cx="110" cy="176" rx="96" ry="14" fill="#0b1426" opacity="0.5"/>
+                    <ellipse cx="110" cy="176" rx="96" ry="14" fill="#0c1f18" opacity="0.5"/>
                     <g transform="rotate(-6 110 90)">
-                        <rect x="30" y="52" width="22" height="122" rx="4" fill="#4670a6"/>
-                        <rect x="54" y="38" width="22" height="136" rx="4" fill="#d5ab3b"/>
-                        <rect x="78" y="46" width="22" height="128" rx="4" fill="#8db1d3"/>
-                        <rect x="102" y="30" width="22" height="144" rx="4" fill="#e4734b"/>
-                        <rect x="126" y="58" width="22" height="116" rx="4" fill="#c2942c"/>
-                        <rect x="150" y="44" width="22" height="130" rx="4" fill="#2b476e"/>
-                        <rect x="102" y="18" width="88" height="10" rx="3" fill="#0b1426" opacity="0.6"/>
+                        <rect x="30" y="52" width="22" height="122" rx="4" fill="#387e61"/>
+                        <rect x="54" y="38" width="22" height="136" rx="4" fill="#d0ab40"/>
+                        <rect x="78" y="46" width="22" height="128" rx="4" fill="#82b9a0"/>
+                        <rect x="102" y="30" width="22" height="144" rx="4" fill="#c99a4d"/>
+                        <rect x="126" y="58" width="22" height="116" rx="4" fill="#b58e29"/>
+                        <rect x="150" y="44" width="22" height="130" rx="4" fill="#23513e"/>
+                        <rect x="102" y="18" width="88" height="10" rx="3" fill="#0c1f18" opacity="0.6"/>
                     </g>
-                    <circle cx="196" cy="40" r="26" fill="#d5ab3b" opacity="0.15"/>
-                    <circle cx="196" cy="40" r="15" fill="#d5ab3b" opacity="0.2"/>
+                    <circle cx="196" cy="40" r="26" fill="#d0ab40" opacity="0.15"/>
+                    <circle cx="196" cy="40" r="15" fill="#d0ab40" opacity="0.2"/>
                 </svg>
             </div>
 
