@@ -32,6 +32,17 @@ class User extends Authenticatable
         return $this->hasOne(Member::class);
     }
 
+    protected static function booted(): void
+    {
+        static::saved(function (self $user): void {
+            // Keep the Spatie role in sync with the `role` column so that
+            // changing users.role directly in the database takes effect.
+            if ($user->wasChanged('role') && $user->role) {
+                $user->syncRoles([$user->role]);
+            }
+        });
+    }
+
     public function getFirstRoleName(): ?string
     {
         return $this->roles->first()?->name;
